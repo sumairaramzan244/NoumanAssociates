@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Our Services - Nouman Associates</title>
+    <meta
+      name="description"
+      content="Detailed overview of accounting, tax, audit and advisory services offered by Nouman Associates."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: ['class'],
+        theme: {
+          container: {
+            center: true,
+            padding: '2rem',
+            screens: {
+              '2xl': '1400px',
+            },
+          },
+          extend: {
+            colors: {
+              border: 'hsl(var(--border))',
+              input: 'hsl(var(--input))',
+              ring: 'hsl(var(--ring))',
+              background: 'hsl(var(--background))',
+              foreground: 'hsl(var(--foreground))',
+              primary: {
+                DEFAULT: 'hsl(var(--primary))',
+                foreground: 'hsl(var(--primary-foreground))',
+              },
+              secondary: {
+                DEFAULT: 'hsl(var(--secondary))',
+                foreground: 'hsl(var(--secondary-foreground))',
+              },
+              destructive: {
+                DEFAULT: 'hsl(var(--destructive))',
+                foreground: 'hsl(var(--destructive-foreground))',
+              },
+              muted: {
+                DEFAULT: 'hsl(var(--muted))',
+                foreground: 'hsl(var(--muted-foreground))',
+              },
+              accent: {
+                DEFAULT: 'hsl(var(--accent))',
+                foreground: 'hsl(var(--accent-foreground))',
+              },
+              popover: {
+                DEFAULT: 'hsl(var(--popover))',
+                foreground: 'hsl(var(--popover-foreground))',
+              },
+              card: {
+                DEFAULT: 'hsl(var(--card))',
+                foreground: 'hsl(var(--card-foreground))',
+              },
+              gold: {
+                DEFAULT: 'hsl(var(--gold))',
+                light: 'hsl(var(--gold-light))',
+                dark: 'hsl(var(--gold-dark))',
+              },
+              navy: {
+                DEFAULT: 'hsl(var(--navy))',
+                dark: 'hsl(var(--dark-navy))',
+              },
+            },
+            fontFamily: {
+              montserrat: ['Montserrat', 'sans-serif'],
+              playfair: ['Playfair Display', 'serif'],
+            },
+            borderRadius: {
+              lg: 'var(--radius)',
+              md: 'calc(var(--radius) - 2px)',
+              sm: 'calc(var(--radius) - 4px)',
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Shared custom CSS (colors, animations, globals) -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body class="bg-background text-foreground">
+    <!-- HEADER -->
+    <header
+      class="fixed top-0 left-0 right-0 z-50 bg-navy/95 backdrop-blur-md border-b border-primary/20 shadow-lg"
+    >
+      <div class="container mx-auto px-4">
+        <nav class="flex items-center justify-between py-4">
+          <div class="flex items-center gap-3">
+            <img
+              src="pics/ca-logo.png"
+              alt="CA Services Logo"
+              class="h-12 w-12 object-contain rounded-full"
+            />
+            <span class="text-lg font-bold font-montserrat text-white">Nouman</span>
+            <span class="text-lg font-bold font-montserrat text-[#facc15]"> Associates</span>
+          </div>
+
+          <div class="hidden lg:flex items-center gap-8">
+            <a
+              href="index.html#home"
+              class="text-sm font-semibold font-montserrat text-white hover:text-primary transition-colors uppercase tracking-wide border-b-2 border-transparent hover:border-primary pb-1"
+              >HOME</a
+            >
+            <a
+              href="#top"
+              class="text-sm font-semibold font-montserrat text-white hover:text-primary transition-colors uppercase tracking-wide border-b-2 border-transparent hover:border-primary pb-1"
+              >SERVICES</a
+            >
+            <a
+              href="index.html#about"
+              class="text-sm font-semibold font-montserrat text-white hover:text-primary transition-colors uppercase tracking-wide border-b-2 border-transparent hover:border-primary pb-1"
+              >ABOUT US</a
+            >
+            <a
+              href="index.html#contact"
+              class="text-sm font-semibold font-montserrat text-white hover:text-primary transition-colors uppercase tracking-wide border-b-2 border-transparent hover:border-primary pb-1"
+              >CONTACT US</a
+            >
+            <a
+              href="index.html#contact"
+              class="font-montserrat font-bold px-6 py-2 rounded-full border border-primary text-primary bg-transparent hover:bg-primary hover:text-primary-foreground transition-colors"
+            >
+              Free Consultation
+            </a>
+          </div>
+
+          <!-- Mobile menu button -->
+          <button
+            id="mobile-menu-toggle"
+            class="lg:hidden inline-flex flex-col items-center justify-center rounded-full p-2 border border-white/50 text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-navy focus:ring-white"
+            aria-expanded="false"
+            aria-label="Open main menu"
+          >
+            <span class="sr-only">Open main menu</span>
+            <span class="block h-0.5 w-5 bg-white mb-1"></span>
+            <span class="block h-0.5 w-5 bg-white mb-1"></span>
+            <span class="block h-0.5 w-5 bg-white"></span>
+          </button>
+        </nav>
+
+        <!-- Mobile menu panel -->
+        <div
+          id="mobile-menu"
+          class="lg:hidden hidden border-t border-primary/20 pb-4 mt-1"
+        >
+          <div class="flex flex-col gap-2 pt-2">
+            <a
+              href="index.html#home"
+              class="mobile-nav-link text-sm font-semibold font-montserrat text-white hover:text-primary px-2 py-1"
+              >Home</a
+            >
+            <a
+              href="#top"
+              class="mobile-nav-link text-sm font-semibold font-montserrat text-white hover:text-primary px-2 py-1"
+              >Services</a
+            >
+            <a
+              href="index.html#about"
+              class="mobile-nav-link text-sm font-semibold font-montserrat text-white hover:text-primary px-2 py-1"
+              >About Us</a
+            >
+            <a
+              href="index.html#contact"
+              class="mobile-nav-link text-sm font-semibold font-montserrat text-white hover:text-primary px-2 py-1"
+              >Contact Us</a
+            >
+            <a
+              href="index.html#contact"
+              class="mobile-nav-link inline-flex items-center justify-center mt-2 font-montserrat font-bold px-4 py-2 rounded-full border border-primary text-primary bg-white/5 hover:bg-primary hover:text-primary-foreground transition-colors"
+            >
+              Free Consultation
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO / INTRO FOR SERVICES PAGE -->
+    <section
+      id="top"
+      class="pt-32 pb-20 px-4 bg-gradient-to-b from-black/80 via-navy/90 to-background text-white"
+    >
+      <div class="container mx-auto max-w-4xl text-center">
+        <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight bg-gradient-to-r from-white via-white to-white bg-clip-text text-transparent">
+          Our Professional Services
+        </h1>
+        <p class="mt-2 text-lg md:text-xl lg:text-2xl mb-4 font-normal bg-gradient-to-r from-[#FF8C00] via-[#FFD700] to-[#9ACD32] bg-clip-text text-transparent">
+          Stay informed and compliant with our precise financial reporting services
+        </p>
+      </div>
+    </section>
+
+    <!-- SERVICES DETAIL SECTIONS -->
+    <main class="bg-background">
+      <section
+        id="business-process-outsourcing"
+        class="py-24 px-4 border-b border-border bg-gradient-to-b from-background via-muted/40 to-background scroll-mt-32"
+      >
+        <div class="container mx-auto max-w-5xl">
+          <h2 class="text-3xl md:text-4xl font-playfair font-bold mb-6 bg-gradient-to-r from-[#FF8C00] via-[#FFD700] to-[#9ACD32] bg-clip-text text-transparent">
+            Business Process Outsourcing
+          </h2>
+          <p class="text-muted-foreground font-montserrat leading-relaxed mb-4">
+            We streamline your day-to-day operations by handling routine tasks efficiently, helping you reduce workload,
+            cut operational costs, and save valuable time so you can stay focused on core business strategy and growth.
+          </p>
+          <h3 class="text-lg md:text-xl font-montserrat font-semibold mb-4 text-foreground">
+            Key Benefits:
+          </h3>
+          <ul class="space-y-3 text-muted-foreground font-montserrat">
+            <li class="flex items-start gap-3">
+              <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-primary/10 text-primary border border-primary/40">
+                ✓
+              </span>
+              <span>Reduced operational and staffing costs</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-primary/10 text-primary border border-primary/40">
+                ✓
+              </span>
+              <span>Improved workflow and productivity</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-primary/10 text-primary border border-primary/40">
+                ✓
+              </span>
+              <span>More focus on core business activities</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-primary/10 text-primary border border-primary/40">
+                ✓
+              </span>
+              <span>Enhanced overall efficiency</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section
+        id="financial-advisory"
+        class="py-24 px-4 border-b border-border bg-gradient-to-b from-background via-muted/30 to-background scroll-mt-32"
+      >
+        <div class="container mx-auto max-w-5xl">
+          <h2 class="text-3xl md:text-4xl font-playfair font-bold mb-6 bg-gradient-to-r from-[#FF8C00] via-[#FFD700] to-[#9ACD32] bg-clip-text text-transparent">
+            Financial Advisory
+          </h2>
+          <p class="text-muted-foreground font-montserrat leading-relaxed mb-4">
+            We provide expert financial guidance designed to strengthen your decision-making, improve profitability,
+            manage risks effectively, and support long-term financial planning for sustainable business growth.
+          </p>
+          <h3 class="text-lg md:text-xl font-montserrat font-semibold mb-4 text-foreground">
+            Key Benefits:
+          </h3>
+          <ul class="space-y-3 text-muted-foreground font-montserrat">
+            <li class="flex items-start gap-3">
+              <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-primary/10 text-primary border border-primary/40">
+                ✓
+              </span>
+              <span>Tailored financial strategies</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-primary/10 text-primary border border-primary/40">
+                ✓
+              </span>
+              <span>Better planning and forecasting</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-primary/10 text-primary border border-primary/40">
+                ✓
+              </span>
+              <span>Improved risk management</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-primary/10 text-primary border border-primary/40">
+                ✓
+              </span>
+              <span>Stronger financial stability</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section
+        id="tax-management"
+        class="py-24 px-4 border-b border-border bg-gradient-to-b from-background via-muted/30 to-background scroll-mt-32"
+      >
+        <div class="container mx-auto max-w-5xl">
+          <h2 class="text-3xl md:text-4xl font-playfair font-bold mb-6 bg-gradient-to-r from-[#FF8C00] via-[#FFD700] to-[#9ACD32] bg-clip-text text-transparent">
+            Tax Management
+          </h2>
+          <p class="text-muted-foreground font-montserrat leading-relaxed mb-4">
+            We provide strategic tax management that helps reduce liabilities and keeps your business fully compliant.
+            Our approach ensures accurate planning, smart decision-making, and smooth tax operations, giving you better
+            savings and peace of mind.
+          </p>
+          <h3 class="text-lg md:text-xl font-montserrat font-semibold mb-4 text-foreground">
+            Key Benefits:
+          </h3>
+          <ul class="space-y-3 text-muted-foreground font-montserrat">
+            <li class="flex items-start gap-3">
+              <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-primary/10 text-primary border border-primary/40">
+                ✓
+              </span>
+              <span>Reduced tax liabilities</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-primary/10 text-primary border border-primary/40">
+                ✓
+              </span>
+              <span>Compliant and optimized tax strategies</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-primary/10 text-primary border border-primary/40">
+                ✓
+              </span>
+              <span>Better financial planning</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-primary/10 text-primary border border-primary/40">
+                ✓
+              </span>
+              <span>Smooth and stress-free tax operations</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section
+        id="audit"
+        class="py-24 px-4 border-b border-border bg-gradient-to-b from-background via-muted/30 to-background scroll-mt-32"
+      >
+        <div class="container mx-auto max-w-5xl">
+          <h2 class="text-3xl md:text-4xl font-playfair font-bold mb-6 bg-gradient-to-r from-[#FF8C00] via-[#FFD700] to-[#9ACD32] bg-clip-text text-transparent">
+            Auditing
+          </h2>
+          <p class="text-muted-foreground font-montserrat leading-relaxed mb-4">
+            Our auditing services ensure accuracy and transparency by identifying errors, risks, and compliance issues,
+            giving you clear insights that strengthen internal controls and enhance business integrity.
+          </p>
+          <h3 class="text-lg md:text-xl font-montserrat font-semibold mb-4 text-foreground">
+            Key Benefits:
+          </h3>
+          <ul class="space-y-3 text-muted-foreground font-montserrat">
+            <li class="flex items-start gap-3">
+              <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-primary/10 text-primary border border-primary/40">
+                ✓
+              </span>
+              <span>Detects errors and risks</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-primary/10 text-primary border border-primary/40">
+                ✓
+              </span>
+              <span>Strengthens compliance</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-primary/10 text-primary border border-primary/40">
+                ✓
+              </span>
+              <span>Unbiased and clear reporting</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-primary/10 text-primary border border-primary/40">
+                ✓
+              </span>
+              <span>Builds business credibility</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section
+        id="accounting-bookkeeping"
+        class="py-24 px-4 bg-gradient-to-b from-background via-muted/40 to-background scroll-mt-32"
+      >
+        <div class="container mx-auto max-w-5xl">
+          <h2 class="text-3xl md:text-4xl font-playfair font-bold mb-6 bg-gradient-to-r from-[#FF8C00] via-[#FFD700] to-[#9ACD32] bg-clip-text text-transparent">
+            Accounting &amp; Bookkeeping
+          </h2>
+          <p class="text-muted-foreground font-montserrat leading-relaxed mb-4">
+            We maintain accurate, organized, and compliant financial records that support smooth operations, minimize
+            errors, improve financial clarity, and allow you to stay focused on strategic business growth.
+          </p>
+          <h3 class="text-lg md:text-xl font-montserrat font-semibold mb-4 text-foreground">
+            Key Benefits:
+          </h3>
+          <ul class="space-y-3 text-muted-foreground font-montserrat">
+            <li class="flex items-start gap-3">
+              <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-primary/10 text-primary border border-primary/40">
+                ✓
+              </span>
+              <span>Accurate and compliant records</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-primary/10 text-primary border border-primary/40">
+                ✓
+              </span>
+              <span>Better financial clarity</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-primary/10 text-primary border border-primary/40">
+                ✓
+              </span>
+              <span>Error-free documentation</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-primary/10 text-primary border border-primary/40">
+                ✓
+              </span>
+              <span>Streamlined and cost-effective</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- SIMPLE FOOTER -->
+    <footer class="bg-background border-t border-border py-8 px-4">
+      <div class="max-w-5xl mx-auto flex flex-col items-center justify-center gap-4 text-center">
+        <p class="text-sm text-muted-foreground font-montserrat">
+          © <span id="year"></span>
+          <span class="font-semibold text-foreground"> Nouman Associates</span>. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      const yearEl = document.getElementById('year');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+      // Mobile nav toggle
+      const mobileToggle = document.getElementById('mobile-menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      if (mobileToggle && mobileMenu) {
+        mobileToggle.addEventListener('click', () => {
+          const isOpen = !mobileMenu.classList.contains('hidden');
+          mobileMenu.classList.toggle('hidden');
+          mobileToggle.setAttribute('aria-expanded', String(!isOpen));
+        });
+
+        document.querySelectorAll('.mobile-nav-link').forEach((link) => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            mobileToggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+    </script>
+  </body>
+</html>

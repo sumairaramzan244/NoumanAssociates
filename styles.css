@@ -1,0 +1,142 @@
+:root {
+  --background: 0 0% 98%;
+  --foreground: 0 0% 10%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 10%;
+
+  --popover: 48 96.6387% 76.6667%;
+  --popover-foreground: 0 0% 10%;
+
+  --primary: 45 90% 55%;
+  --primary-foreground: 0 0% 5%;
+
+  --secondary: 0 0% 96%;
+  --secondary-foreground: 0 0% 10%;
+
+  --muted: 0 0% 94%;
+  --muted-foreground: 0 0% 40%;
+
+  --accent: 45 90% 55%;
+  --accent-foreground: 0 0% 5%;
+
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 0 0% 90%;
+  --input: 0 0% 96%;
+  --ring: 45 90% 55%;
+
+  --radius: 3rem;
+
+  /* Custom CA website colors */
+  --gold: 45 90% 55%;
+  --gold-light: 45 95% 65%;
+  --gold-dark: 45 85% 45%;
+  --dark-navy: 220 30% 15%;
+  --navy: 220 25% 20%;
+
+  /* Shadows / transitions */
+  --shadow-gold: 0 10px 40px -10px hsl(45 90% 55% / 0.3);
+  --shadow-elegant: 0 20px 50px -15px hsl(0 0% 0% / 0.1);
+  --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark {
+  --radius: 3rem;
+}
+
+/* Global base styles */
+* {
+  border-color: hsl(var(--border));
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Utility animations */
+@keyframes gradient {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes logo-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-logo-marquee {
+  animation: logo-marquee 25s linear infinite;
+}
+
+.animate-gradient {
+  animation: gradient 3s ease infinite;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.5s ease-out;
+}
+
+.animate-typing {
+  animation: typing 2s steps(40, end);
+}
+
+/* Strong mobile overrides to prevent any "half width" layout */
+@media (max-width: 640px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  body > div {
+    width: 100%;
+  }
+
+  #contact {
+    width: 100%;
+  }
+
+  #contact .grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+}
